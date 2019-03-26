@@ -14,5 +14,3 @@ spring:
     show-sql: true
 env: 
   name: dev
-server:
-  port: 8081
