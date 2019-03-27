@@ -9,7 +9,7 @@ zuul:
     # 简洁写法
     # product: /myProduct/**
   # 排除某些路由
-  ignored-patterns:
-    - /**/product/listForOrder
+  # ignored-patterns:
+    # - /**/product/listForOrder
     # - /product/product/listForOrder
     # - /myProduct/product/listForOrder
