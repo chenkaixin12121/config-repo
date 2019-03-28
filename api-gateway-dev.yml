@@ -13,9 +13,3 @@ zuul:
     # - /**/product/listForOrder
     - /product/product/listForOrder
     - /myProduct/product/listForOrder
-spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    password: guest
-    username: guest
