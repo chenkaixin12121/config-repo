@@ -23,10 +23,6 @@ spring:
     sender:
       type: web # 真鸡儿坑...
     base-url: http://localhost:9411/
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
 hystrix:
   command:
     default:
