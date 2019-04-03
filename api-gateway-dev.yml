@@ -1,6 +1,3 @@
-spring:
-  application:
-    name: api-gateway
 zuul:
   # 全部服务忽略敏感头
   sensitive-headers: 
@@ -16,5 +13,5 @@ zuul:
   # 排除某些路由
   ignored-patterns:
     # - /**/product/listForOrder
-    - /product/product/listForOrder
+    # - /product/product/listForOrder
     - /myProduct/product/listForOrder
