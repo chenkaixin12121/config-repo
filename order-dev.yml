@@ -50,4 +50,4 @@ logging:
         cloud:
           openfeign: debug
 env:
-  name: dev2
+  name: dev
