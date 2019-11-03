@@ -1,2 +1,53 @@
+spring:
+  application:
+    name: order
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sell?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+  jpa:
+    show-sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    password: guest
+    username: guest
+  redis:
+    host: localhost
+    port: 6379
+  sleuth:
+    sampler:
+      probability: 1
+  zipkin:
+    sender:
+      type: web # 真鸡儿坑...
+    base-url: http://localhost:9411/
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+    getProductInfoList:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
+feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          openfeign: debug
 env:
   name: dev
