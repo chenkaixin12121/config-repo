@@ -1,6 +1,6 @@
 spring:
   application:
-    name: product
+    name: product-service
   datasource:
     username: root
     password: root
@@ -20,9 +20,30 @@ spring:
   sleuth:
     sampler:
       probability: 1
+      
 logging:
   level:
     org:
       springframework:
         cloud:
           openfeign: debug
+
+# actuator开放端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+# feign超时判定，优先级高于ribbon
+feign:
+  client:
+    config:
+      # 全局默认配置
+      default:
+        connectTimeout: 1000
+        readTimeout: 5000
+      # 指定服务配置，优先级更高
+      product-service:
+        connectTimeout: 1000
+        readTimeout: 8000
