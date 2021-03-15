@@ -4,7 +4,7 @@ server:
 spring:
   datasource: # 数据源的相关配置
     url: jdbc:mysql://localhost:3306/foodie-shop-dev?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
-    password: root
+    password: '{cipher}f89884129be96f102fc1781f56e96a3e97f849968040cd5d2755c07206910fd7'
   redis:
     database: 0
     host: localhost
