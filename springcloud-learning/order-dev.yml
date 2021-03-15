@@ -97,4 +97,4 @@ logging:
           openfeign: debug
           
 env:
-  name: dev
+  name: dev2
