@@ -88,6 +88,9 @@ management:
     web:
       exposure:
         include: "*"
+  endpoint:
+    health:
+      show-details: always
         
 logging:
   level:
@@ -97,4 +100,4 @@ logging:
           openfeign: debug
           
 env:
-  name: dev2
+  name: dev
