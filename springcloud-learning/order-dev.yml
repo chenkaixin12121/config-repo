@@ -100,5 +100,5 @@ logging:
           openfeign: debug
           
 env:
-  name: devabc
+  name: dev
   name2: '{cipher}805c39cdd952d2bfff5b5b9a8524370ab4fc50c51223a4a20e5154ecf6bff50e'
